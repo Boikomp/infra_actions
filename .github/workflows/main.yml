@@ -57,6 +57,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull boikomp/infra-actions:v1.03.2023
             sudo docker stop $(sudo docker ps -a -q)
